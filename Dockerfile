@@ -4,7 +4,7 @@ FROM nvidia/cuda:10.1-devel-ubuntu18.04
 ENV DEBIAN_FRONTEND=noninteractive 
 
 RUN apt-get update
-RUN apt-get install -y git nano cmake
+RUN apt-get install -y git nano cmake libthrust-dev
 WORKDIR /
 RUN git clone https://github.com/GPUOpen-ProfessionalCompute-Tools/HIP
 WORKDIR /HIP
